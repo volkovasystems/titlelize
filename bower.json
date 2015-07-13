@@ -1,0 +1,30 @@
+{
+  "name": "titlelize",
+  "main": "titlelize.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/volkovasystems/titlelize",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "description": "Transform any human readable alphanumeric string divided by certain characters into space separated first letter uppercase form.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "titlelize",
+    "title-form",
+    "human-readable-title"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "harden": "~0.0.0",
+    "spread-space": "~0.0.0"
+  }
+}
