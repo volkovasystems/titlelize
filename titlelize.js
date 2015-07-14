@@ -65,20 +65,18 @@ var titlelize = function titlelize( text ){
 			} );
 
 	}else{
-		var error = new Error( "invalid text format" );
-		console.error( error );
-		throw error;
+		return text;
 	}
 };
 
 harden.bind( titlelize )
     (
         "TEXT_PATTERN",
-        /^(?:[a-zA-Z][a-zA-Z0-9]*[-_ ])*[a-zA-Z][a-zA-Z0-9]*$/
+        /^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*$/
     );
 
 harden.bind( titlelize )
     (
         "TERM_PATTERN",
-        /^[a-zA-Z]|([-_ ])[a-zA-Z]/g
+        /^[a-zA-Z0-9]|([-_ ])[a-zA-Z0-9]/g
     );
