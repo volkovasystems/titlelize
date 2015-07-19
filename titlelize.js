@@ -72,7 +72,7 @@ var titlelize = function titlelize( text ){
 harden.bind( titlelize )
     (
         "TEXT_PATTERN",
-        /^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*$/
+        /^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*.*$/
     );
 
 harden.bind( titlelize )
