@@ -42,13 +42,34 @@
 
 	@include:
 		{
-            "harden": "harden"
-			"spread": "spread"
+			"harden": "harden"
+			"disdo": "disdo"
 		}
 	@end-include
 */
+
+if( !( typeof window != "undefined" &&
+	"harden" in window &&
+	"disdo" in window ) )
+{
+	var harden = require( "harden" );
+	var disdo = require( "disdo" );
+}
+
+if( typeof window != "undefined" && 
+	!( "harden" in window ) )
+{
+	throw new Error( "harden is not defined" ); 
+}
+
+if( typeof window != "undefined" && 
+	!( "disdo" in window ) )
+{
+	throw new Error( "disdo is not defined" ); 
+}
+
 var titlelize = function titlelize( text ){
-    /*:
+	/*:
 		@meta-configuration:
 			{
 				"text:required": "string"
@@ -56,8 +77,8 @@ var titlelize = function titlelize( text ){
 		@end-meta-configuration
 	*/
 
-    if( titlelize.TEXT_PATTERN.test( text ) ){
-		text = spread( text );
+	if( titlelize.TEXT_PATTERN.test( text ) ){
+		text = disdo( text );
 
 		return text.replace( titlelize.TERM_PATTERN,
 			function onReplaced( match ){
@@ -70,13 +91,21 @@ var titlelize = function titlelize( text ){
 };
 
 harden.bind( titlelize )
-    (
-        "TEXT_PATTERN",
-        /^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*.*$/
-    );
+	( "TEXT_PATTERN",
+		/^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*.*$/ );
 
 harden.bind( titlelize )
-    (
-        "TERM_PATTERN",
-        /^[a-zA-Z0-9]|([-_ ])[a-zA-Z0-9]/g
-    );
+	( "TERM_PATTERN",
+		/^[a-zA-Z0-9]|([-_ ])[a-zA-Z0-9]/g );
+
+if( typeof module != "undefined" ){ 
+	module.exports = titlelize; 
+}
+
+if( typeof global != "undefined" ){
+	harden
+		.bind( titlelize )( "globalize", 
+			function globalize( ){
+				harden.bind( global )( "titlelize", titlelize );
+			} );
+}

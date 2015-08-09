@@ -1,7 +1,7 @@
 {
   "name": "titlelize",
   "main": "titlelize.js",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "homepage": "https://github.com/volkovasystems/titlelize",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
@@ -24,7 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "harden": "~0.0.0",
-    "spread-space": "~0.0.0"
+    "disdo": "~0.0.1",
+    "harden": "~0.2.0"
   }
 }
