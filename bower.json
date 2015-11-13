@@ -1,7 +1,7 @@
 {
   "name": "titlelize",
   "main": "titlelize.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/volkovasystems/titlelize",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>"

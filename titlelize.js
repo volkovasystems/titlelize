@@ -77,6 +77,13 @@ var titlelize = function titlelize( text ){
 		@end-meta-configuration
 	*/
 
+	if( !text || 
+		text === "" ||
+		typeof text != "string" )
+	{
+		return text;
+	}
+
 	if( titlelize.TEXT_PATTERN.test( text ) ){
 		text = disdo( text );
 
