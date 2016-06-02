@@ -4,8 +4,8 @@
   "description": "Transform any human readable alphanumeric string divided by certain characters into space separated first letter uppercase form.",
   "main": "titlelize.js",
   "dependencies": {
-    "disdo": "0.0.1",
-    "harden": "^0.2.0"
+    "disdo": "0.0.2",
+    "harden": "^0.3.1"
   },
   "devDependencies": {},
   "scripts": {

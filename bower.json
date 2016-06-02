@@ -24,7 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "disdo": "~0.0.1",
-    "harden": "~0.2.0"
+    "disdo": "^0.0.2",
+    "harden": "^0.3.1"
   }
 }

@@ -1,8 +1,12 @@
+"use strict";
+
 /*:
 	@module-license:
 		The MIT License (MIT)
+		@mit-license
 
-		Copyright (c) 2014 Richeve Siodina Bebedor
+		Copyright (@c) 2016 Richeve Siodina Bebedor
+		@email: richeve.bebedor@gmail.com
 
 		Permission is hereby granted, free of charge, to any person obtaining a copy
 		of this software and associated documentation files (the "Software"), to deal
@@ -25,14 +29,15 @@
 
 	@module-configuration:
 		{
-			"packageName": "titlelize",
-			"fileName": "titlelize.js",
-			"moduleName": "titlelize",
-			"authorName": "Richeve S. Bebedor",
-			"authorEMail": "richeve.bebedor@gmail.com",
-			"repository": "git@github.com:volkovasystems/titlelize.git",
-			"testCase": "titlelize-test.js",
-			"isGlobal": true
+			"package": "titlelize",
+			"path": "titlelize/titlelize.js",
+			"file": "titlelize.js",
+			"module": "titlelize",
+			"author": "Richeve S. Bebedor",
+			"eMail": "richeve.bebedor@gmail.com",
+			"repository": "https://github.com/volkovasystems/titlelize.git",
+			"test": "titlelize-test.js",
+			"global": true
 		}
 	@end-module-configuration
 
@@ -48,24 +53,21 @@
 	@end-include
 */
 
-if( !( typeof window != "undefined" &&
-	"harden" in window &&
-	"disdo" in window ) )
-{
+if( typeof window == "undefined" ){
 	var harden = require( "harden" );
 	var disdo = require( "disdo" );
 }
 
-if( typeof window != "undefined" && 
+if( typeof window != "undefined" &&
 	!( "harden" in window ) )
 {
-	throw new Error( "harden is not defined" ); 
+	throw new Error( "harden is not defined" );
 }
 
-if( typeof window != "undefined" && 
+if( typeof window != "undefined" &&
 	!( "disdo" in window ) )
 {
-	throw new Error( "disdo is not defined" ); 
+	throw new Error( "disdo is not defined" );
 }
 
 var titlelize = function titlelize( text ){
@@ -77,7 +79,7 @@ var titlelize = function titlelize( text ){
 		@end-meta-configuration
 	*/
 
-	if( !text || 
+	if( !text ||
 		text === "" ||
 		typeof text != "string" )
 	{
@@ -98,21 +100,11 @@ var titlelize = function titlelize( text ){
 };
 
 harden.bind( titlelize )
-	( "TEXT_PATTERN",
-		/^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*.*$/ );
+	( "TEXT_PATTERN", /^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*.*$/ );
 
 harden.bind( titlelize )
-	( "TERM_PATTERN",
-		/^[a-zA-Z0-9]|([-_ ])[a-zA-Z0-9]/g );
+	( "TERM_PATTERN", /^[a-zA-Z0-9]|([-_ ])[a-zA-Z0-9]/g );
 
-if( typeof module != "undefined" ){ 
-	module.exports = titlelize; 
-}
-
-if( typeof global != "undefined" ){
-	harden
-		.bind( titlelize )( "globalize", 
-			function globalize( ){
-				harden.bind( global )( "titlelize", titlelize );
-			} );
+if( typeof module != "undefined" ){
+	module.exports = titlelize;
 }
