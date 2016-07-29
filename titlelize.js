@@ -1,6 +1,6 @@
 "use strict";
 
-/*:
+/*;
 	@module-license:
 		The MIT License (MIT)
 		@mit-license
@@ -71,7 +71,7 @@ if( typeof window != "undefined" &&
 }
 
 var titlelize = function titlelize( text ){
-	/*:
+	/*;
 		@meta-configuration:
 			{
 				"text:required": "string"
