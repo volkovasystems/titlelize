@@ -42,32 +42,31 @@
 	@end-module-configuration
 
 	@module-documentation:
-
 	@end-module-documentation
 
 	@include:
 		{
+			"disdo": "disdo",
 			"harden": "harden"
-			"disdo": "disdo"
 		}
 	@end-include
 */
 
 if( typeof window == "undefined" ){
-	var harden = require( "harden" );
 	var disdo = require( "disdo" );
-}
-
-if( typeof window != "undefined" &&
-	!( "harden" in window ) )
-{
-	throw new Error( "harden is not defined" );
+	var harden = require( "harden" );
 }
 
 if( typeof window != "undefined" &&
 	!( "disdo" in window ) )
 {
 	throw new Error( "disdo is not defined" );
+}
+
+if( typeof window != "undefined" &&
+	!( "harden" in window ) )
+{
+	throw new Error( "harden is not defined" );
 }
 
 var titlelize = function titlelize( text ){
@@ -86,24 +85,16 @@ var titlelize = function titlelize( text ){
 		return text;
 	}
 
-	if( titlelize.TEXT_PATTERN.test( text ) ){
-		text = disdo( text );
-
-		return text.replace( titlelize.TERM_PATTERN,
-			function onReplaced( match ){
+	return disdo( text )
+		.toLowerCase( )
+		.replace( titlelize.TERM_PATTERN,
+			function onReplace( match ){
 				return match.toUpperCase( );
 			} );
-
-	}else{
-		return text;
-	}
 };
 
 harden.bind( titlelize )
-	( "TEXT_PATTERN", /^(?:[a-zA-Z0-9][a-zA-Z0-9]*[-_ ])*[a-zA-Z0-9][a-zA-Z0-9]*.*$/ );
-
-harden.bind( titlelize )
-	( "TERM_PATTERN", /^[a-zA-Z0-9]|([-_ ])[a-zA-Z0-9]/g );
+	( "TERM_PATTERN", /^[a-z]|\s[a-z]/g );
 
 if( typeof module != "undefined" ){
 	module.exports = titlelize;
