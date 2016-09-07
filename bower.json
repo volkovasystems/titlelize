@@ -1,6 +1,6 @@
 {
   "name": "titlelize",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "titlelize.js",
   "homepage": "https://github.com/volkovasystems/titlelize",
   "authors": [
@@ -24,7 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "harden": "^0.3.3",
-    "disdo": "^0.1.0"
+    "disdo": "^0.1.1",
+    "harden": "^0.3.5"
   }
 }

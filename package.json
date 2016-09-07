@@ -1,11 +1,11 @@
 {
   "name": "titlelize",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Transform any human readable alphanumeric string divided by certain characters into space separated first letter uppercase form.",
   "main": "titlelize.js",
   "dependencies": {
-    "disdo": "^0.1.0",
-    "harden": "^0.3.3"
+    "disdo": "^0.1.1",
+    "harden": "^0.3.5"
   },
   "devDependencies": {},
   "scripts": {
