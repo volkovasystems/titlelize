@@ -34,6 +34,9 @@
 			"file": "titlelize.js",
 			"module": "titlelize",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/titlelize.git",
 			"test": "titlelize-test.js",
@@ -42,34 +45,26 @@
 	@end-module-configuration
 
 	@module-documentation:
+		Transform any human readable alphanumeric string divided by certain
+		characters into space separated first letter uppercase form.
 	@end-module-documentation
 
 	@include:
 		{
 			"disdo": "disdo",
-			"harden": "harden"
+			"harden": "harden",
+			"falzy": "falzy",
+			"protype": "protype"
 		}
 	@end-include
 */
 
-if( typeof window == "undefined" ){
-	var disdo = require( "disdo" );
-	var harden = require( "harden" );
-}
+const disdo = require( "disdo" );
+const harden = require( "harden" );
+const falzy = require( "falzy" );
+const protype = require( "protype" );
 
-if( typeof window != "undefined" &&
-	!( "disdo" in window ) )
-{
-	throw new Error( "disdo is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "harden" in window ) )
-{
-	throw new Error( "harden is not defined" );
-}
-
-var titlelize = function titlelize( text ){
+const titlelize = function titlelize( text ){
 	/*;
 		@meta-configuration:
 			{
@@ -78,10 +73,7 @@ var titlelize = function titlelize( text ){
 		@end-meta-configuration
 	*/
 
-	if( !text ||
-		text === "" ||
-		typeof text != "string" )
-	{
+	if( falzy( text ) || !protype( text, STRING ) ){
 		return text;
 	}
 
@@ -96,6 +88,4 @@ var titlelize = function titlelize( text ){
 harden.bind( titlelize )
 	( "TERM_PATTERN", /^[a-z]|\s[a-z]/g );
 
-if( typeof module != "undefined" ){
-	module.exports = titlelize;
-}
+module.exports = titlelize;
