@@ -59,33 +59,29 @@
 	@end-include
 */
 
-const disdo = require( "disdo" );
-const falzy = require( "falzy" );
-const harden = require( "harden" );
-const protype = require( "protype" );
+var disdo = require("disdo");
+var falzy = require("falzy");
+var harden = require("harden");
+var protype = require("protype");
 
-const titlelize = function titlelize( text ){
+var titlelize = function titlelize(text) {
 	/*;
-		@meta-configuration:
-			{
-				"text:required": "string"
-			}
-		@end-meta-configuration
-	*/
+ 	@meta-configuration:
+ 		{
+ 			"text:required": "string"
+ 		}
+ 	@end-meta-configuration
+ */
 
-	if( falzy( text ) || !protype( text, STRING ) ){
+	if (falzy(text) || !protype(text, STRING)) {
 		return text;
 	}
 
-	return disdo( text )
-		.toLowerCase( )
-		.replace( titlelize.TERM_PATTERN,
-			function onReplace( match ){
-				return match.toUpperCase( );
-			} );
+	return disdo(text).toLowerCase().replace(titlelize.TERM_PATTERN, function onReplace(match) {
+		return match.toUpperCase();
+	});
 };
 
-harden.bind( titlelize )
-	( "TERM_PATTERN", /^[a-z]|\s[a-z]/g );
+harden.bind(titlelize)("TERM_PATTERN", /^[a-z]|\s[a-z]/g);
 
 module.exports = titlelize;
