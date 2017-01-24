@@ -1,6 +1,6 @@
 {
   "name": "titlelize",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "main": "titlelize.js",
   "support": "titlelize.support.js",
   "deploy": "titlelize.deploy.js",
@@ -27,9 +27,9 @@
     "tests"
   ],
   "dependencies": {
-    "disdo": "^0.3.0",
+    "disdo": "^0.4.0",
     "falzy": "^0.7.0",
-    "harden": "^0.12.0",
-    "protype": "^0.7.0"
+    "harden": "^0.13.0",
+    "protype": "^0.8.0"
   }
 }
