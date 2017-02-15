@@ -1,63 +1,63 @@
 "use strict";
 
 /*;
-	@module-license:
-		The MIT License (MIT)
-		@mit-license
-
-		Copyright (@c) 2017 Richeve Siodina Bebedor
-		@email: richeve.bebedor@gmail.com
-
-		Permission is hereby granted, free of charge, to any person obtaining a copy
-		of this software and associated documentation files (the "Software"), to deal
-		in the Software without restriction, including without limitation the rights
-		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-		copies of the Software, and to permit persons to whom the Software is
-		furnished to do so, subject to the following conditions:
-
-		The above copyright notice and this permission notice shall be included in all
-		copies or substantial portions of the Software.
-
-		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-		SOFTWARE.
-	@end-module-license
-
-	@module-configuration:
-		{
-			"package": "titlelize",
-			"path": "titlelize/titlelize.js",
-			"file": "titlelize.js",
-			"module": "titlelize",
-			"author": "Richeve S. Bebedor",
-			"contributors": [
-				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
-			],
-			"eMail": "richeve.bebedor@gmail.com",
-			"repository": "https://github.com/volkovasystems/titlelize.git",
-			"test": "titlelize-test.js",
-			"global": true
-		}
-	@end-module-configuration
-
-	@module-documentation:
-		Transform any human readable alphanumeric string divided by certain
-		characters into space separated first letter uppercase form.
-	@end-module-documentation
-
-	@include:
-		{
-			"disdo": "disdo",
-			"falzy": "falzy",
-			"harden": "harden",
-			"protype": "protype"
-		}
-	@end-include
-*/
+              	@module-license:
+              		The MIT License (MIT)
+              		@mit-license
+              
+              		Copyright (@c) 2017 Richeve Siodina Bebedor
+              		@email: richeve.bebedor@gmail.com
+              
+              		Permission is hereby granted, free of charge, to any person obtaining a copy
+              		of this software and associated documentation files (the "Software"), to deal
+              		in the Software without restriction, including without limitation the rights
+              		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+              		copies of the Software, and to permit persons to whom the Software is
+              		furnished to do so, subject to the following conditions:
+              
+              		The above copyright notice and this permission notice shall be included in all
+              		copies or substantial portions of the Software.
+              
+              		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+              		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+              		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+              		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+              		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+              		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+              		SOFTWARE.
+              	@end-module-license
+              
+              	@module-configuration:
+              		{
+              			"package": "titlelize",
+              			"path": "titlelize/titlelize.js",
+              			"file": "titlelize.js",
+              			"module": "titlelize",
+              			"author": "Richeve S. Bebedor",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+              			],
+              			"eMail": "richeve.bebedor@gmail.com",
+              			"repository": "https://github.com/volkovasystems/titlelize.git",
+              			"test": "titlelize-test.js",
+              			"global": true
+              		}
+              	@end-module-configuration
+              
+              	@module-documentation:
+              		Transform any human readable alphanumeric string divided by certain
+              		characters into space separated first letter uppercase form.
+              	@end-module-documentation
+              
+              	@include:
+              		{
+              			"disdo": "disdo",
+              			"falzy": "falzy",
+              			"harden": "harden",
+              			"protype": "protype"
+              		}
+              	@end-include
+              */
 
 var disdo = require("disdo");
 var falzy = require("falzy");
@@ -66,23 +66,28 @@ var protype = require("protype");
 
 var titlelize = function titlelize(text) {
 	/*;
- 	@meta-configuration:
- 		{
- 			"text:required": "string"
- 		}
- 	@end-meta-configuration
- */
+                                          	@meta-configuration:
+                                          		{
+                                          			"text:required": "string"
+                                          		}
+                                          	@end-meta-configuration
+                                          */
 
 	if (falzy(text) || !protype(text, STRING)) {
 		return text;
 	}
 
-	return disdo(text).toLowerCase().replace(titlelize.TERM_PATTERN, function onReplace(match) {
+	return disdo(text).
+	toLowerCase().
+	replace(titlelize.TERM_PATTERN,
+	function onReplace(match) {
 		return match.toUpperCase();
 	});
 };
 
-harden.bind(titlelize)("TERM_PATTERN", /^[a-z]|\s[a-z]/g);
+harden.bind(titlelize)(
+"TERM_PATTERN", /^[a-z]|\s[a-z]/g);
 
 module.exports = titlelize;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRpdGxlbGl6ZS5qcyJdLCJuYW1lcyI6WyJkaXNkbyIsInJlcXVpcmUiLCJmYWx6eSIsImhhcmRlbiIsInByb3R5cGUiLCJ0aXRsZWxpemUiLCJ0ZXh0IiwiU1RSSU5HIiwidG9Mb3dlckNhc2UiLCJyZXBsYWNlIiwiVEVSTV9QQVRURVJOIiwib25SZXBsYWNlIiwibWF0Y2giLCJ0b1VwcGVyQ2FzZSIsImJpbmQiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiQUFBQTs7QUFFQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUEyREEsSUFBTUEsUUFBUUMsUUFBUyxPQUFULENBQWQ7QUFDQSxJQUFNQyxRQUFRRCxRQUFTLE9BQVQsQ0FBZDtBQUNBLElBQU1FLFNBQVNGLFFBQVMsUUFBVCxDQUFmO0FBQ0EsSUFBTUcsVUFBVUgsUUFBUyxTQUFULENBQWhCOztBQUVBLElBQU1JLFlBQVksU0FBU0EsU0FBVCxDQUFvQkMsSUFBcEIsRUFBMEI7QUFDM0M7Ozs7Ozs7O0FBUUEsS0FBSUosTUFBT0ksSUFBUCxLQUFpQixDQUFDRixRQUFTRSxJQUFULEVBQWVDLE1BQWYsQ0FBdEIsRUFBK0M7QUFDOUMsU0FBT0QsSUFBUDtBQUNBOztBQUVELFFBQU9OLE1BQU9NLElBQVAsRUFDTEUsV0FESyxHQUVMQyxPQUZLLENBRUlKLFVBQVVLLFlBRmQsRUFHTCxTQUFTQyxTQUFULENBQW9CQyxLQUFwQixFQUEyQjtBQUMxQixTQUFPQSxNQUFNQyxXQUFOLEVBQVA7QUFDQSxFQUxJLENBQVA7QUFNQSxDQW5CRDs7QUFxQkFWLE9BQU9XLElBQVAsQ0FBYVQsU0FBYixFQUNHLGNBREgsRUFDbUIsaUJBRG5COztBQUdBVSxPQUFPQyxPQUFQLEdBQWlCWCxTQUFqQiIsImZpbGUiOiJ0aXRsZWxpemUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcblxuLyo7XG5cdEBtb2R1bGUtbGljZW5zZTpcblx0XHRUaGUgTUlUIExpY2Vuc2UgKE1JVClcblx0XHRAbWl0LWxpY2Vuc2VcblxuXHRcdENvcHlyaWdodCAoQGMpIDIwMTcgUmljaGV2ZSBTaW9kaW5hIEJlYmVkb3Jcblx0XHRAZW1haWw6IHJpY2hldmUuYmViZWRvckBnbWFpbC5jb21cblxuXHRcdFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcblx0XHRvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG5cdFx0aW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuXHRcdHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcblx0XHRjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcblx0XHRmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuXG5cdFx0VGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4gYWxsXG5cdFx0Y29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cblxuXHRcdFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1Jcblx0XHRJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcblx0XHRGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcblx0XHRBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG5cdFx0TElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcblx0XHRPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOIFRIRVxuXHRcdFNPRlRXQVJFLlxuXHRAZW5kLW1vZHVsZS1saWNlbnNlXG5cblx0QG1vZHVsZS1jb25maWd1cmF0aW9uOlxuXHRcdHtcblx0XHRcdFwicGFja2FnZVwiOiBcInRpdGxlbGl6ZVwiLFxuXHRcdFx0XCJwYXRoXCI6IFwidGl0bGVsaXplL3RpdGxlbGl6ZS5qc1wiLFxuXHRcdFx0XCJmaWxlXCI6IFwidGl0bGVsaXplLmpzXCIsXG5cdFx0XHRcIm1vZHVsZVwiOiBcInRpdGxlbGl6ZVwiLFxuXHRcdFx0XCJhdXRob3JcIjogXCJSaWNoZXZlIFMuIEJlYmVkb3JcIixcblx0XHRcdFwiY29udHJpYnV0b3JzXCI6IFtcblx0XHRcdFx0XCJKb2huIExlbm9uIE1hZ2hhbm95IDxqb2hubGVub25tYWdoYW5veUBnbWFpbC5jb20+XCJcblx0XHRcdF0sXG5cdFx0XHRcImVNYWlsXCI6IFwicmljaGV2ZS5iZWJlZG9yQGdtYWlsLmNvbVwiLFxuXHRcdFx0XCJyZXBvc2l0b3J5XCI6IFwiaHR0cHM6Ly9naXRodWIuY29tL3ZvbGtvdmFzeXN0ZW1zL3RpdGxlbGl6ZS5naXRcIixcblx0XHRcdFwidGVzdFwiOiBcInRpdGxlbGl6ZS10ZXN0LmpzXCIsXG5cdFx0XHRcImdsb2JhbFwiOiB0cnVlXG5cdFx0fVxuXHRAZW5kLW1vZHVsZS1jb25maWd1cmF0aW9uXG5cblx0QG1vZHVsZS1kb2N1bWVudGF0aW9uOlxuXHRcdFRyYW5zZm9ybSBhbnkgaHVtYW4gcmVhZGFibGUgYWxwaGFudW1lcmljIHN0cmluZyBkaXZpZGVkIGJ5IGNlcnRhaW5cblx0XHRjaGFyYWN0ZXJzIGludG8gc3BhY2Ugc2VwYXJhdGVkIGZpcnN0IGxldHRlciB1cHBlcmNhc2UgZm9ybS5cblx0QGVuZC1tb2R1bGUtZG9jdW1lbnRhdGlvblxuXG5cdEBpbmNsdWRlOlxuXHRcdHtcblx0XHRcdFwiZGlzZG9cIjogXCJkaXNkb1wiLFxuXHRcdFx0XCJmYWx6eVwiOiBcImZhbHp5XCIsXG5cdFx0XHRcImhhcmRlblwiOiBcImhhcmRlblwiLFxuXHRcdFx0XCJwcm90eXBlXCI6IFwicHJvdHlwZVwiXG5cdFx0fVxuXHRAZW5kLWluY2x1ZGVcbiovXG5cbmNvbnN0IGRpc2RvID0gcmVxdWlyZSggXCJkaXNkb1wiICk7XG5jb25zdCBmYWx6eSA9IHJlcXVpcmUoIFwiZmFsenlcIiApO1xuY29uc3QgaGFyZGVuID0gcmVxdWlyZSggXCJoYXJkZW5cIiApO1xuY29uc3QgcHJvdHlwZSA9IHJlcXVpcmUoIFwicHJvdHlwZVwiICk7XG5cbmNvbnN0IHRpdGxlbGl6ZSA9IGZ1bmN0aW9uIHRpdGxlbGl6ZSggdGV4dCApe1xuXHQvKjtcblx0XHRAbWV0YS1jb25maWd1cmF0aW9uOlxuXHRcdFx0e1xuXHRcdFx0XHRcInRleHQ6cmVxdWlyZWRcIjogXCJzdHJpbmdcIlxuXHRcdFx0fVxuXHRcdEBlbmQtbWV0YS1jb25maWd1cmF0aW9uXG5cdCovXG5cblx0aWYoIGZhbHp5KCB0ZXh0ICkgfHwgIXByb3R5cGUoIHRleHQsIFNUUklORyApICl7XG5cdFx0cmV0dXJuIHRleHQ7XG5cdH1cblxuXHRyZXR1cm4gZGlzZG8oIHRleHQgKVxuXHRcdC50b0xvd2VyQ2FzZSggKVxuXHRcdC5yZXBsYWNlKCB0aXRsZWxpemUuVEVSTV9QQVRURVJOLFxuXHRcdFx0ZnVuY3Rpb24gb25SZXBsYWNlKCBtYXRjaCApe1xuXHRcdFx0XHRyZXR1cm4gbWF0Y2gudG9VcHBlckNhc2UoICk7XG5cdFx0XHR9ICk7XG59O1xuXG5oYXJkZW4uYmluZCggdGl0bGVsaXplIClcblx0KCBcIlRFUk1fUEFUVEVSTlwiLCAvXlthLXpdfFxcc1thLXpdL2cgKTtcblxubW9kdWxlLmV4cG9ydHMgPSB0aXRsZWxpemU7XG4iXX0=
+
+//# sourceMappingURL=titlelize.support.js.map
