@@ -18,4 +18,5 @@ disdo \
 falzy \
 harden \
 protype \
---save
+--save \
+--force-latest
