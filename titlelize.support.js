@@ -46,14 +46,13 @@
               
               	@module-documentation:
               		Transform any human readable alphanumeric string divided by certain
-              		characters into space separated first letter uppercase form.
+              			characters into space separated first letter uppercase form.
               	@end-module-documentation
               
               	@include:
               		{
               			"disdo": "disdo",
               			"falzy": "falzy",
-              			"harden": "harden",
               			"protype": "protype"
               		}
               	@end-include
@@ -61,8 +60,9 @@
 
 var disdo = require("disdo");
 var falzy = require("falzy");
-var harden = require("harden");
 var protype = require("protype");
+
+var TERM_PATTERN = /^[a-z]|\s[a-z]/g;
 
 var titlelize = function titlelize(text) {
 	/*;
@@ -77,16 +77,9 @@ var titlelize = function titlelize(text) {
 		return text;
 	}
 
-	return disdo(text).
-	toLowerCase().
-	replace(titlelize.TERM_PATTERN,
-	function onReplace(match) {
-		return match.toUpperCase();
-	});
+	return disdo(text).toLowerCase().
+	replace(TERM_PATTERN, function (match) {return match.toUpperCase();});
 };
-
-harden.bind(titlelize)(
-"TERM_PATTERN", /^[a-z]|\s[a-z]/g);
 
 module.exports = titlelize;
 
