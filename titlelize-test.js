@@ -1,11 +1,15 @@
-"use strict";
 
+const assert = require( "assert" );
 const titlelize = require( "./titlelize.js" );
 
-console.log( titlelize( "hello-world" ) );
+assert.equal( titlelize( "helloworld" ), "Helloworld", "should have value 'Helloworld'" );
 
-console.log( titlelize( "hello_world" ) );
+assert.equal( titlelize( "hello-world" ), "Hello World", "should have value 'Hello World'" );
 
-console.log( titlelize( "helloWorld" ) );
+assert.equal( titlelize( "hello_world" ), "Hello World", "should have value 'Hello World'" );
 
-console.log( titlelize( "hello world" ) );
+assert.equal( titlelize( "helloWorld" ), "Hello World", "should have value 'Hello World'" );
+
+assert.equal( titlelize( "hello world" ), "Hello World", "should have value 'Hello World'" );
+
+console.log( "ok" );
