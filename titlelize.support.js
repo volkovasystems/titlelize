@@ -34,10 +34,11 @@
               			"file": "titlelize.js",
               			"module": "titlelize",
               			"author": "Richeve S. Bebedor",
-              			"contributors": [
-              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
-              			],
               			"eMail": "richeve.bebedor@gmail.com",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+              				"Vinse Vinalon <vinsevinalon@gmail.com>"
+              			],
               			"repository": "https://github.com/volkovasystems/titlelize.git",
               			"test": "titlelize-test.js",
               			"global": true
@@ -52,15 +53,13 @@
               	@include:
               		{
               			"disdo": "disdo",
-              			"falzy": "falzy",
-              			"protype": "protype"
+              			"falzy": "falzy"
               		}
               	@end-include
               */
 
 var disdo = require("disdo");
 var falzy = require("falzy");
-var protype = require("protype");
 
 var TERM_PATTERN = /^[a-z]|\s[a-z]/g;
 
@@ -73,7 +72,7 @@ var titlelize = function titlelize(text) {
                                           	@end-meta-configuration
                                           */
 
-	if (falzy(text) || !protype(text, STRING)) {
+	if (falzy(text) || typeof text != "string") {
 		return text;
 	}
 
