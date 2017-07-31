@@ -1,0 +1,88 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2017-07-31T11:14:31.797Z",
+    "end": "2017-07-31T11:14:31.805Z",
+    "duration": 8
+  },
+  "tests": [
+    {
+      "title": "should have value 'Helloworld'",
+      "fullTitle": "titlelize \"titlelize( \"helloworld\" )\" should have value 'Helloworld'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"hello-world\" )\" should have value 'Hello World'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"hello_world\" )\" should have value 'Hello World'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"helloWorld\" ),\" should have value 'Hello World'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"hello world\" )\" should have value 'Hello World'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should have value 'Helloworld'",
+      "fullTitle": "titlelize \"titlelize( \"helloworld\" )\" should have value 'Helloworld'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"hello-world\" )\" should have value 'Hello World'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"hello_world\" )\" should have value 'Hello World'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"helloWorld\" ),\" should have value 'Hello World'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have value 'Hello World'",
+      "fullTitle": "titlelize \"titlelize( \"hello world\" )\" should have value 'Hello World'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
