@@ -165,18 +165,16 @@ describe( "titlelize", ( ) => {
 
 } );
 
-
 //: @end-client
-
 
 //: @bridge:
 
-describe( "titlelize", ( ) => {
+describe( `titlelize`, ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `titlelize( "helloworld" )`, ( ) => {
-		it( `should be equal to "Helloworld"`, ( ) => {
+	describe( `"titlelize( 'helloworld' )"`, ( ) => {
+		it( `"should be equal to 'Helloworld'"`, ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -191,6 +189,70 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
+	describe( `"titlelize( 'hello-world' )"`, ( ) => {
+		it( `"should be equal to 'Hello World'"`, ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return titlelize( "hello-world" );
+				}
+
+			).value;
+
+			assert.equal( result, "Hello World" );
+
+		} );
+	} );
+
+	describe( `"titlelize( 'hello_world' )"`, ( ) => {
+		it( `"should be equal to 'Hello World'"`, ( ) => {
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return titlelize( "hello_world" );
+				}
+
+			).value;
+
+			assert.equal( result, "Hello World" );
+
+		} );
+	} );
+
+
+	describe( `"titlelize( 'helloWorld' )"`, ( ) => {
+		it( `"should be equal to 'Hello World'"`, ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return titlelize( "helloWorld" );
+				}
+
+			).value;
+
+			assert.equal( result, "Hello World" );
+
+		} );
+	} );
+	/*
+	describe( `"titlelize( 'hello world' )"`, ( ) => {
+		it( `"should be equal to 'Hello World'"`, ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return titlelize( "hello world" );
+				}
+
+			).value;
+
+			assert.equal( result, "Hello World" );
+
+		} );
+	} );
+	*/
 } );
 
 //: @end-bridge
