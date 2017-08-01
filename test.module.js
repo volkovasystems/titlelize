@@ -72,7 +72,7 @@ const path = require( "path" );
 //: @server:
 
 describe( "titlelize", ( ) => {
-	
+
 	describe( `"titlelize( "helloworld" )"`, ( ) => {
 		it( "should have value 'Helloworld'", ( ) => {
 
@@ -112,17 +112,17 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-	
+
 } );
 
 
 //: @end-server
 
 
-//: @client: 
+//: @client:
 
 describe( "titlelize", ( ) => {
-	
+
 	describe( `"titlelize( "helloworld" )"`, ( ) => {
 		it( "should have value 'Helloworld'", ( ) => {
 
@@ -162,7 +162,7 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-	
+
 } );
 
 
@@ -173,57 +173,24 @@ describe( "titlelize", ( ) => {
 
 describe( "titlelize", ( ) => {
 
-	
-	let directory = __dirname;
-	let testBridge = path.resolve( directory, "bridge.html" );
-	let bridgeURL = `file://${ testBridge }`;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( "titlelize", ( ) => {
-	
-	describe( `"titlelize( "helloworld" )"`, ( ) => {
-		it( "should have value 'Helloworld'", ( ) => {
+	describe( `titlelize( "helloworld" )`, ( ) => {
+		it( `should be equal to "Helloworld"`, ( ) => {
 
-			assert.equal(titlelize ( true, true ) );
+			let result = browser.url( bridgeURL ).execute(
 
-		} );
-	} );
+				function( ){
+					return titlelize( "helloworld" );
+				}
 
-	describe( `"titlelize( "hello-world" )"`, ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+			).value;
 
-			assert.equal(titlelize ( true, true ) );
+			assert.equal( result, "Helloworld" );
 
 		} );
 	} );
 
-	describe( `"titlelize( "hello_world" )"`, ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
-
-			assert.equal(titlelize ( true, true ) );
-
-		} );
-	} );
-
-	describe( `"titlelize( "helloWorld" ),"`, ( ) => {
-		it( "should have value 'Hello World'" , ( ) => {
-
-			assert.equal(titlelize ( true, true ) );
-
-		} );
-	} );
-
-	describe( `"titlelize( "hello world" )"`, ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
-
-			assert.equal(titlelize ( true, true ) );
-
-		} );
-	} );
-	
-} );
-
-	
 } );
 
 //: @end-bridge
-
