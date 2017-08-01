@@ -236,7 +236,7 @@ describe( `titlelize`, ( ) => {
 
 		} );
 	} );
-	/*
+
 	describe( `"titlelize( 'hello world' )"`, ( ) => {
 		it( `"should be equal to 'Hello World'"`, ( ) => {
 
@@ -252,7 +252,7 @@ describe( `titlelize`, ( ) => {
 
 		} );
 	} );
-	*/
+	
 } );
 
 //: @end-bridge
