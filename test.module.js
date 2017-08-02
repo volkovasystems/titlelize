@@ -81,6 +81,7 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
+
 	describe( `"titlelize( "hello-world" )"`, ( ) => {
 		it( "should have value 'Hello World'", ( ) => {
 
@@ -88,6 +89,7 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
+
 
 	describe( `"titlelize( "hello_world" )"`, ( ) => {
 		it( "should have value 'Hello World'", ( ) => {
@@ -97,6 +99,7 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
+
 	describe( `"titlelize( "helloWorld" ),"`, ( ) => {
 		it( "should have value 'Hello World'" , ( ) => {
 
@@ -104,6 +107,7 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
+	
 
 	describe( `"titlelize( "hello world" )"`, ( ) => {
 		it( "should have value 'Hello World'", ( ) => {
@@ -252,7 +256,7 @@ describe( `titlelize`, ( ) => {
 
 		} );
 	} );
-	
+
 } );
 
 //: @end-bridge
