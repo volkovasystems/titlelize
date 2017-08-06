@@ -25,12 +25,5 @@
 		"bower_components",
 		"test",
 		"tests"
-	],
-	"resolutions": {
-		"falzy": "^0.23.0"
-	},
-	"dependencies": {
-		"disdo": "^0.16.0",
-		"falzy": "^0.23.0"
-	}
+	]
 }
