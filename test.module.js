@@ -74,7 +74,7 @@ const path = require( "path" );
 describe( "titlelize", ( ) => {
 
 	describe( "`titlelize( 'helloworld' )`", ( ) => {
-		it( "should have value 'Helloworld'", ( ) => {
+		it( "should be equal to 'Helloworld'", ( ) => {
 
 			assert.equal( titlelize( "helloworld" ), "Helloworld");
 
@@ -83,7 +83,7 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'hello-world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello-world" ), "Hello World" );
 
@@ -92,7 +92,7 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'hello_world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello_world" ), "Hello World" );
 
@@ -101,21 +101,22 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'helloWorld' )`", ( ) => {
-		it( "should have value 'Hello World'" , ( ) => {
+		it( "should be equal to 'Hello World'" , ( ) => {
 
 			assert.equal( titlelize( "helloWorld" ), "Hello World" );
 
 		} );
 	} );
-	
+
 
 	describe( "`titlelize( 'hello world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello world" ), "Hello World" );
 
 		} );
 	} );
+
 } );
 
 
@@ -127,7 +128,7 @@ describe( "titlelize", ( ) => {
 describe( "titlelize", ( ) => {
 
 	describe( "`titlelize( 'helloworld' )`", ( ) => {
-		it( "should have value 'Helloworld'", ( ) => {
+		it( "should be equal to 'Helloworld'", ( ) => {
 
 			assert.equal( titlelize( "helloworld" ), "Helloworld");
 
@@ -136,7 +137,7 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'hello-world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello-world" ), "Hello World" );
 
@@ -145,7 +146,7 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'hello_world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello_world" ), "Hello World" );
 
@@ -154,21 +155,22 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'helloWorld' )`", ( ) => {
-		it( "should have value 'Hello World'" , ( ) => {
+		it( "should be equal to 'Hello World'" , ( ) => {
 
 			assert.equal( titlelize( "helloWorld" ), "Hello World" );
 
 		} );
 	} );
-	
+
 
 	describe( "`titlelize( 'hello world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello world" ), "Hello World" );
 
 		} );
 	} );
+	
 } );
 
 
@@ -180,8 +182,8 @@ describe( `titlelize`, ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `"titlelize( 'helloworld' )"`, ( ) => {
-		it( `"should be equal to 'Helloworld'"`, ( ) => {
+	describe( "`titlelize( 'helloworld' )`", ( ) => {
+		it( "should be equal to 'Helloworld'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -196,8 +198,8 @@ describe( `titlelize`, ( ) => {
 		} );
 	} );
 
-	describe( `"titlelize( 'hello-world' )"`, ( ) => {
-		it( `"should be equal to 'Hello World'"`, ( ) => {
+	describe( "`titlelize( 'hello-world' )`", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -212,8 +214,8 @@ describe( `titlelize`, ( ) => {
 		} );
 	} );
 
-	describe( `"titlelize( 'hello_world' )"`, ( ) => {
-		it( `"should be equal to 'Hello World'"`, ( ) => {
+	describe( "`titlelize( 'hello_world' )`", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -228,8 +230,8 @@ describe( `titlelize`, ( ) => {
 	} );
 
 
-	describe( `"titlelize( 'helloWorld' )"`, ( ) => {
-		it( `"should be equal to 'Hello World'"`, ( ) => {
+	describe( "`titlelize( 'helloWorld' )`", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -244,8 +246,8 @@ describe( `titlelize`, ( ) => {
 		} );
 	} );
 
-	describe( `"titlelize( 'hello world' )"`, ( ) => {
-		it( `"should be equal to 'Hello World'"`, ( ) => {
+	describe( "`titlelize( 'hello world' )`", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
