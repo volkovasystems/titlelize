@@ -1,0 +1,212 @@
+{
+	"state": {
+		"passed": 5,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-09T03:17:44.807Z",
+	"end": "2017-08-09T03:18:18.639Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "titlelize",
+			"duration": 0,
+			"start": "2017-08-09T03:18:18.198Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "titlelize",
+			"duration": 265,
+			"start": "2017-08-09T03:18:18.198Z",
+			"end": "2017-08-09T03:18:18.463Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-09T03:18:18.199Z",
+					"end": "2017-08-09T03:18:18.200Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Helloworld'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.307Z",
+					"end": "2017-08-09T03:18:18.307Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Helloworld'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.308Z",
+					"end": "2017-08-09T03:18:18.308Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.348Z",
+					"end": "2017-08-09T03:18:18.348Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.348Z",
+					"end": "2017-08-09T03:18:18.348Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.384Z",
+					"end": "2017-08-09T03:18:18.384Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.386Z",
+					"end": "2017-08-09T03:18:18.386Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.424Z",
+					"end": "2017-08-09T03:18:18.424Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.424Z",
+					"end": "2017-08-09T03:18:18.424Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.463Z",
+					"end": "2017-08-09T03:18:18.463Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "titlelize",
+					"associatedTest": "should be equal to 'Hello World'"
+				},
+				{
+					"start": "2017-08-09T03:18:18.463Z",
+					"end": "2017-08-09T03:18:18.463Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "titlelize"
+				}
+			]
+		},
+		{
+			"name": "`titlelize( 'helloworld' )`",
+			"duration": 110,
+			"start": "2017-08-09T03:18:18.198Z",
+			"end": "2017-08-09T03:18:18.308Z",
+			"tests": [
+				{
+					"name": "should be equal to 'Helloworld'",
+					"start": "2017-08-09T03:18:18.199Z",
+					"end": "2017-08-09T03:18:18.307Z",
+					"duration": 108,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`titlelize( 'hello-world' )`",
+			"duration": 40,
+			"start": "2017-08-09T03:18:18.308Z",
+			"end": "2017-08-09T03:18:18.348Z",
+			"tests": [
+				{
+					"name": "should be equal to 'Hello World'",
+					"start": "2017-08-09T03:18:18.308Z",
+					"end": "2017-08-09T03:18:18.348Z",
+					"duration": 40,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`titlelize( 'hello_world' )`",
+			"duration": 37,
+			"start": "2017-08-09T03:18:18.348Z",
+			"end": "2017-08-09T03:18:18.385Z",
+			"tests": [
+				{
+					"name": "should be equal to 'Hello World'",
+					"start": "2017-08-09T03:18:18.348Z",
+					"end": "2017-08-09T03:18:18.384Z",
+					"duration": 36,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`titlelize( 'helloWorld' )`",
+			"duration": 39,
+			"start": "2017-08-09T03:18:18.385Z",
+			"end": "2017-08-09T03:18:18.424Z",
+			"tests": [
+				{
+					"name": "should be equal to 'Hello World'",
+					"start": "2017-08-09T03:18:18.385Z",
+					"end": "2017-08-09T03:18:18.423Z",
+					"duration": 38,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`titlelize( 'hello world' )`",
+			"duration": 39,
+			"start": "2017-08-09T03:18:18.424Z",
+			"end": "2017-08-09T03:18:18.463Z",
+			"tests": [
+				{
+					"name": "should be equal to 'Hello World'",
+					"start": "2017-08-09T03:18:18.424Z",
+					"end": "2017-08-09T03:18:18.463Z",
+					"duration": 39,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

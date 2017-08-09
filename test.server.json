@@ -1,88 +1,88 @@
 {
-  "stats": {
-    "suites": 6,
-    "tests": 5,
-    "passes": 5,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-06T22:15:26.033Z",
-    "end": "2017-08-06T22:15:26.039Z",
-    "duration": 6
-  },
-  "tests": [
-    {
-      "title": "should have value 'Helloworld'",
-      "fullTitle": "titlelize `titlelize( 'helloworld' )` should have value 'Helloworld'",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'hello-world' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'hello_world' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'helloWorld' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'hello world' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "should have value 'Helloworld'",
-      "fullTitle": "titlelize `titlelize( 'helloworld' )` should have value 'Helloworld'",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'hello-world' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'hello_world' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'helloWorld' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should have value 'Hello World'",
-      "fullTitle": "titlelize `titlelize( 'hello world' )` should have value 'Hello World'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 6,
+		"tests": 5,
+		"passes": 5,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-09T03:17:43.679Z",
+		"end": "2017-08-09T03:17:43.684Z",
+		"duration": 5
+	},
+	"tests": [
+		{
+			"title": "should be equal to 'Helloworld'",
+			"fullTitle": "titlelize `titlelize( 'helloworld' )` should be equal to 'Helloworld'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'hello-world' )` should be equal to 'Hello World'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'hello_world' )` should be equal to 'Hello World'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'helloWorld' )` should be equal to 'Hello World'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'hello world' )` should be equal to 'Hello World'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to 'Helloworld'",
+			"fullTitle": "titlelize `titlelize( 'helloworld' )` should be equal to 'Helloworld'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'hello-world' )` should be equal to 'Hello World'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'hello_world' )` should be equal to 'Hello World'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'helloWorld' )` should be equal to 'Hello World'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Hello World'",
+			"fullTitle": "titlelize `titlelize( 'hello world' )` should be equal to 'Hello World'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

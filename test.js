@@ -70,7 +70,7 @@ const titlelize = require( "./titlelize.js" );
 describe( "titlelize", ( ) => {
 
 	describe( "`titlelize( 'helloworld' )`", ( ) => {
-		it( "should have value 'Helloworld'", ( ) => {
+		it( "should be equal to 'Helloworld'", ( ) => {
 
 			assert.equal( titlelize( "helloworld" ), "Helloworld");
 
@@ -79,7 +79,7 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'hello-world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello-world" ), "Hello World" );
 
@@ -88,7 +88,7 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'hello_world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello_world" ), "Hello World" );
 
@@ -97,21 +97,22 @@ describe( "titlelize", ( ) => {
 
 
 	describe( "`titlelize( 'helloWorld' )`", ( ) => {
-		it( "should have value 'Hello World'" , ( ) => {
+		it( "should be equal to 'Hello World'" , ( ) => {
 
 			assert.equal( titlelize( "helloWorld" ), "Hello World" );
 
 		} );
 	} );
-	
+
 
 	describe( "`titlelize( 'hello world' )`", ( ) => {
-		it( "should have value 'Hello World'", ( ) => {
+		it( "should be equal to 'Hello World'", ( ) => {
 
 			assert.equal( titlelize( "hello world" ), "Hello World" );
 
 		} );
 	} );
+
 } );
 
 
