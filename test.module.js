@@ -81,7 +81,6 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`titlelize( 'hello-world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
 
@@ -89,7 +88,6 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`titlelize( 'hello_world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
@@ -99,7 +97,6 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`titlelize( 'helloWorld' )`", ( ) => {
 		it( "should be equal to 'Hello World'" , ( ) => {
 
@@ -107,7 +104,6 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`titlelize( 'hello world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
@@ -135,7 +131,6 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`titlelize( 'hello-world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
 
@@ -143,7 +138,6 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`titlelize( 'hello_world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
@@ -153,7 +147,6 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`titlelize( 'helloWorld' )`", ( ) => {
 		it( "should be equal to 'Hello World'" , ( ) => {
 
@@ -162,7 +155,6 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`titlelize( 'hello world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
 
@@ -170,7 +162,7 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-	
+
 } );
 
 
@@ -178,7 +170,7 @@ describe( "titlelize", ( ) => {
 
 //: @bridge:
 
-describe( `titlelize`, ( ) => {
+describe( "titlelize", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
