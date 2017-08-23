@@ -77,7 +77,6 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`titlelize( 'hello-world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
 
@@ -85,7 +84,6 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`titlelize( 'hello_world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
@@ -95,7 +93,6 @@ describe( "titlelize", ( ) => {
 		} );
 	} );
 
-
 	describe( "`titlelize( 'helloWorld' )`", ( ) => {
 		it( "should be equal to 'Hello World'" , ( ) => {
 
@@ -103,7 +100,6 @@ describe( "titlelize", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`titlelize( 'hello world' )`", ( ) => {
 		it( "should be equal to 'Hello World'", ( ) => {
